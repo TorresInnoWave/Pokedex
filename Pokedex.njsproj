@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{c99d3c47-4746-4eaf-94b5-37ac46da4653}</ProjectGuid>
+        <ProjectHome>client\app\</ProjectHome>
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile>app.js</StartupFile>
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include="app.html" />
+        <Compile Include="app.component.js" />
+        <Compile Include="app.js" />
+        <Compile Include="common\common.js" />
+        <Compile Include="components\components.js" />
+        <Content Include="common\hero\hero.html" />
+        <Compile Include="common\hero\hero.component.js" />
+        <Compile Include="common\hero\hero.controller.js" />
+        <Compile Include="common\hero\hero.js" />
+        <Compile Include="common\hero\hero.spec.js" />
+        <Content Include="common\navbar\navbar.html" />
+        <Compile Include="common\navbar\navbar.component.js" />
+        <Compile Include="common\navbar\navbar.controller.js" />
+        <Compile Include="common\navbar\navbar.js" />
+        <Compile Include="common\navbar\navbar.spec.js" />
+        <Compile Include="common\user\user.factory.js" />
+        <Compile Include="common\user\user.js" />
+        <Compile Include="common\user\user.spec.js" />
+        <Content Include="components\about\about.html" />
+        <Compile Include="components\about\about.component.js" />
+        <Compile Include="components\about\about.controller.js" />
+        <Compile Include="components\about\about.js" />
+        <Compile Include="components\about\about.spec.js" />
+        <Content Include="components\home\home.html" />
+        <Compile Include="components\home\home.component.js" />
+        <Compile Include="components\home\home.controller.js" />
+        <Compile Include="components\home\home.js" />
+        <Compile Include="components\home\home.spec.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="common" />
+        <Folder Include="common\hero" />
+        <Folder Include="common\navbar" />
+        <Folder Include="common\user" />
+        <Folder Include="components" />
+        <Folder Include="components\about" />
+        <Folder Include="components\home" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>

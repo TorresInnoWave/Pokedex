@@ -1,0 +1,2 @@
+C:\Users\pedro.torres\Source\Repos\Pokedex\obj\Debug\Pokedex.njsprojResolveAssemblyReference.cache
+C:\Users\pedro.torres\Source\Repos\Pokedex\bin\Microsoft.NodejsTools.WebRole.dll
