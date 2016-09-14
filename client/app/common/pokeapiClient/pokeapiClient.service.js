@@ -59,7 +59,7 @@
         // with a limit of 12 and an inputed offset
         $http({
             method: 'GET',
-            url: 'http://pokeapi.co/api/v2/pokemon/?limit=12&offset=' + offset
+            url: '//pokeapi.co/api/v2/pokemon/?limit=12&offset=' + offset
         }).then((response) => {
 
             // these variables will help us keep track of how many
@@ -101,7 +101,53 @@
 
     };
 
-    return { exampleFunction, getPokemons, getPokemon }; 
+    let getCharacteristic = (url, cb) => {
+
+        // check for our pokemon in the service variable `pokemons`
+        // by url
+        let index = pokemons.map(function (pokemon) {
+            return pokemon.url;
+        }).indexOf(url);
+
+
+        // if we already have it
+        if (index !== -1) {
+
+            // return the pokemon from our `pokemons` array
+            cb(null, pokemons[index]);
+
+        } else {
+
+            // get the pokemon from the inputed url
+            $http({
+                method: 'GET',
+                url
+            }).then((response) => { //success function
+
+                let pokemon = response.data;
+
+                // add a url parameter to the pokemon
+                // so that we can find it again by url
+                pokemon.url = url;
+
+                // save the pokemon
+                pokemons.push(pokemon);
+
+                // return the pokemon
+                cb(null, pokemon);
+
+            }, (response) => { //error function
+
+                // return the response as an error
+                cb(response, false);
+
+            });
+
+        }
+
+    };
+
+    return { exampleFunction, getPokemons, getPokemon, getCharacteristic }; 
 
 };
 
